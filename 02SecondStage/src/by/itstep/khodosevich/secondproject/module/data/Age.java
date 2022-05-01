@@ -1,6 +1,7 @@
 package by.itstep.khodosevich.secondproject.module.data;
 
 public class Age {
+    // blablabla
     public static final int MONTHS_IN_YEAR = 12;
     public static final int DAYS_IN_YEAR = 365;
     public static final int HOURS_IN_DAY = 24;
