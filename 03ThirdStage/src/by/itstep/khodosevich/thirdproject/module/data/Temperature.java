@@ -2,6 +2,7 @@ package by.itstep.khodosevich.thirdproject.module.data;
 
 public class Temperature {
     // hahaha
+    // blablabla
     public static double translateCelciesIntoFahrenheit(double celcies) {
         return 9/5.0*celcies+32;
     }
