@@ -1,8 +1,6 @@
 package by.itstep.khodosevich.sixproject.module.logic;
 
 public class Data {
-    // hahaha
-    // blablabla
     public static final int START_YEAR = 6;
 
     public static final int JANUARY = 31;
