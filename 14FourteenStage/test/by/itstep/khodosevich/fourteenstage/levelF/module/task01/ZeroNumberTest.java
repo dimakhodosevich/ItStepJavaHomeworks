@@ -98,7 +98,7 @@ public class ZeroNumberTest {
     public void testFindLastZeroElementPositiveWithTwoZeroElements(){
         int[] actualArray = {0,0};
         int expected = 1;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findLastZeroElement(actualArray);
         assertEquals(expected, actual);
     }
 
