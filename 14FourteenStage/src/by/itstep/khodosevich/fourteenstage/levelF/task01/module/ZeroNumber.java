@@ -1,10 +1,10 @@
-package by.itstep.khodosevich.fourteenstage.levelF.module;
+package by.itstep.khodosevich.fourteenstage.levelF.task01.module;
 
 public class ZeroNumber {
     private ZeroNumber() {
     }
 
-    public static int findFirstZeroElement(int[] array) {
+    public static int findFirstZeroElementIndex(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }
@@ -21,7 +21,7 @@ public class ZeroNumber {
         return firstZeroIndex;
     }
 
-    public static int findLastZeroElement(int[] array) {
+    public static int findLastZeroElementIndex(int[] array) {
         if (array == null || array.length == 0) {
             return -1;
         }

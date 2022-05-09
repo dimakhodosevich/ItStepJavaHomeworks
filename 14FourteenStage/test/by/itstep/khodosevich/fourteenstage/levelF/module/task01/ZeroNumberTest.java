@@ -1,118 +1,119 @@
 package by.itstep.khodosevich.fourteenstage.levelF.module.task01;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
-import static by.itstep.khodosevich.fourteenstage.levelF.module.ZeroNumber.*;
+import static by.itstep.khodosevich.fourteenstage.levelF.task01.module.ZeroNumber.*;
 
 public class ZeroNumberTest {
 
     // test - first element
     @Test
-    public void testFindFirstZeroElementPositiveWithOneRandomElement(){
+    public void testFindFirstZeroElementPositiveWithOneRandomElement() {
         int[] actualArray = {7};
         int expected = -1;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findFirstZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementPositiveWithOneZeroElement(){
+    public void testFindFirstZeroElementPositiveWithOneZeroElement() {
         int[] actualArray = {0};
         int expected = 0;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findFirstZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementPositiveWithFewElementsWithZero(){
-        int[] actualArray = {7,5,0,3,4,5};
+    public void testFindFirstZeroElementPositiveWithFewElementsWithZero() {
+        int[] actualArray = {7, 5, 0, 3, 4, 5};
         int expected = 2;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findFirstZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementPositiveWithFewElementsWithoutZero(){
-        int[] actualArray = {7,5,5,3,4,5};
+    public void testFindFirstZeroElementPositiveWithFewElementsWithoutZero() {
+        int[] actualArray = {7, 5, 5, 3, 4, 5};
         int expected = -1;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findFirstZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementPositiveWithTwoZeroElements(){
-        int[] actualArray = {0,0};
+    public void testFindFirstZeroElementPositiveWithTwoZeroElements() {
+        int[] actualArray = {0, 0};
         int expected = 0;
-        int actual = findFirstZeroElement(actualArray);
+        int actual = findFirstZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementNegativeWithZeroSize(){
+    public void testFindFirstZeroElementNegativeWithZeroSize() {
         int expected = -1;
-        int actual = findFirstZeroElement(new int[0]);
+        int actual = findFirstZeroElementIndex(new int[0]);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindFirstZeroElementNegativeWithNull(){
+    public void testFindFirstZeroElementNegativeWithNull() {
         int expected = -1;
-        int actual = findFirstZeroElement(null);
+        int actual = findFirstZeroElementIndex(null);
         assertEquals(expected, actual);
     }
 
     // test - last element
     @Test
-    public void testFindLastZeroElementPositiveWithOneRandomElement(){
+    public void testFindLastZeroElementPositiveWithOneRandomElement() {
         int[] actualArray = {7};
         int expected = -1;
-        int actual = findLastZeroElement(actualArray);
+        int actual = findLastZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementPositiveWithOneZeroElement(){
+    public void testFindLastZeroElementPositiveWithOneZeroElement() {
         int[] actualArray = {0};
         int expected = 0;
-        int actual = findLastZeroElement(actualArray);
+        int actual = findLastZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementPositiveWithFewElementsWithZero(){
-        int[] actualArray = {7,5,0,3,4,5};
+    public void testFindLastZeroElementPositiveWithFewElementsWithZero() {
+        int[] actualArray = {7, 5, 0, 3, 4, 5};
         int expected = 2;
-        int actual = findLastZeroElement(actualArray);
+        int actual = findLastZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementPositiveWithFewElementsWithoutZero(){
-        int[] actualArray = {7,5,5,3,4,5};
+    public void testFindLastZeroElementPositiveWithFewElementsWithoutZero() {
+        int[] actualArray = {7, 5, 5, 3, 4, 5};
         int expected = -1;
-        int actual = findLastZeroElement(actualArray);
+        int actual = findLastZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementPositiveWithTwoZeroElements(){
-        int[] actualArray = {0,0};
+    public void testFindLastZeroElementPositiveWithTwoZeroElements() {
+        int[] actualArray = {0, 0};
         int expected = 1;
-        int actual = findLastZeroElement(actualArray);
+        int actual = findLastZeroElementIndex(actualArray);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementNegativeWithZeroSize(){
+    public void testFindLastZeroElementNegativeWithZeroSize() {
         int expected = -1;
-        int actual = findLastZeroElement(new int[0]);
+        int actual = findLastZeroElementIndex(new int[0]);
         assertEquals(expected, actual);
     }
 
     @Test
-    public void testFindLastZeroElementNegativeWithNull(){
+    public void testFindLastZeroElementNegativeWithNull() {
         int expected = -1;
-        int actual = findLastZeroElement(null);
+        int actual = findLastZeroElementIndex(null);
         assertEquals(expected, actual);
     }
 
