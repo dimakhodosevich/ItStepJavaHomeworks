@@ -1,9 +1,9 @@
-package by.itstep.khodosevich.fourteenstage.levelF.module.task02;
+package by.itstep.khodosevich.fourteenstage.levelF.module;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static by.itstep.khodosevich.fourteenstage.levelF.task02.module.PositiveNumber.*;
+import static by.itstep.khodosevich.fourteenstage.levelF.module.PositiveNumber.*;
 
 public class PositiveNumberTest {
     // test - first element

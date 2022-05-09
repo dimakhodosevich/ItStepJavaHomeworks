@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.fourteenstage.levelF.task02.module;
+package by.itstep.khodosevich.fourteenstage.levelF.module;
 
 public class PositiveNumber {
     private PositiveNumber() {

@@ -1,9 +1,9 @@
-package by.itstep.khodosevich.fourteenstage.levelF.module.task01;
+package by.itstep.khodosevich.fourteenstage.levelF.module;
 
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static by.itstep.khodosevich.fourteenstage.levelF.task01.module.ZeroNumber.*;
+import static by.itstep.khodosevich.fourteenstage.levelF.module.ZeroNumber.*;
 
 public class ZeroNumberTest {
 

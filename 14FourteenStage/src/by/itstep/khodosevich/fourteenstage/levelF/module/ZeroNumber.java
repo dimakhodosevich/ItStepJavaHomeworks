@@ -1,4 +1,4 @@
-package by.itstep.khodosevich.fourteenstage.levelF.task01.module;
+package by.itstep.khodosevich.fourteenstage.levelF.module;
 
 public class ZeroNumber {
     private ZeroNumber() {
