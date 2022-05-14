@@ -60,7 +60,7 @@ public class ControllerLevelFTask05 {
             }
         } catch (Exception exception) {
             Printer.print("Something went wrong!!! Look at stack trace.");
-            exception.getStackTrace();
+            Printer.print(exception.getStackTrace());
         }
 
     }
