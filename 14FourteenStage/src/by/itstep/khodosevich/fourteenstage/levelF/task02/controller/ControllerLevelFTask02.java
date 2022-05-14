@@ -18,7 +18,7 @@ public class ControllerLevelFTask02 {
             Printer.print("Your array is: " + Arrays.toString(array));
             Printer.print("\nWhich type of action do you want to do?");
             Printer.print("\n1. Sort array by bubble sort method (ascend) to the first element equals 0;");
-            Printer.print("\n2. Sort array bubble sort method (ascend) to the last element equals 0.");
+            Printer.print("\n2. Sort array by bubble sort method (ascend) to the last element equals 0.");
             Printer.print("\nPush only first of second number!!!\n");
 
             int variant;

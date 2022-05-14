@@ -1,14 +1,12 @@
-package by.itstep.khodosevich.fourteenstage.levelF.task01.controller;
+package by.itstep.khodosevich.fourteenstage.levelF.task03.controller;
 
-import by.itstep.khodosevich.fourteenstage.levelF.module.Array;
-import by.itstep.khodosevich.fourteenstage.levelF.module.BubbleSort;
-import by.itstep.khodosevich.fourteenstage.levelF.module.ZeroNumber;
+import by.itstep.khodosevich.fourteenstage.levelF.module.*;
 import by.itstep.khodosevich.fourteenstage.view.Printer;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ControllerLevelFTask01 {
+public class ControllerLevelFTask03 {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -17,8 +15,8 @@ public class ControllerLevelFTask01 {
             int[] array = Array.initArray(size);
             Printer.print("Your array is: " + Arrays.toString(array));
             Printer.print("\nWhich type of action do you want to do?");
-            Printer.print("\n1. Sort array by bubble sort method (descend) to the first element equals 0;");
-            Printer.print("\n2. Sort array by bubble sort method (descend) to the last element equals 0.");
+            Printer.print("\n1. Sort array by select sort method (descend) to the first negative element;");
+            Printer.print("\n2. Sort array by select sort method (descend) to the last negative element.");
             Printer.print("\nPush only first of second number!!!\n");
 
             int variant;
@@ -31,29 +29,30 @@ public class ControllerLevelFTask01 {
                 }
             }
 
-            String message1 = "Your array doesn't has 0 (zero) element!!!";
-            String message2 = "Zero element has index ";
+            String message1 = "Your array doesn't has negative element!!!";
+            String message2 = "Negative element has index ";
 
             if (variant == 1) {
-                int firstIndex = ZeroNumber.findFirstZeroElementIndex(array);
+                int firstIndex = NegativeNumber.findFirstNegativeElementIndex(array);
 
                 if (firstIndex == -1) {
                     Printer.printError(message1);
                 } else {
                     message2 += firstIndex;
                     Printer.print(message2);
-                    BubbleSort.bubbleSortDes(array, 0, firstIndex - 1);
+                    SelectSort.selectSortDes(array, 0, firstIndex - 1);
                     Printer.print("\n" + Arrays.toString(array));
                 }
+
             } else {
-                int lastIndex = ZeroNumber.findLastZeroElementIndex(array);
+                int lastIndex = NegativeNumber.findLastNegativeElementIndex(array);
 
                 if (lastIndex == -1) {
                     Printer.printError(message1);
                 } else {
                     message2 += lastIndex;
                     Printer.print(message2);
-                    BubbleSort.bubbleSortDes(array, 0, lastIndex - 1);
+                    SelectSort.selectSortDes(array, 0, lastIndex - 1);
                     Printer.print("\n" + Arrays.toString(array));
                 }
             }
