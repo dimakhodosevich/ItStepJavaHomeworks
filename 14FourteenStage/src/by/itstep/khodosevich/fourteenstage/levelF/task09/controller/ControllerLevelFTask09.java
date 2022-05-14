@@ -1,12 +1,14 @@
-package by.itstep.khodosevich.fourteenstage.levelF.task07.controller;
+package by.itstep.khodosevich.fourteenstage.levelF.task09.controller;
 
-import by.itstep.khodosevich.fourteenstage.levelF.module.*;
+import by.itstep.khodosevich.fourteenstage.levelF.module.Array;
+import by.itstep.khodosevich.fourteenstage.levelF.module.ParityNumber;
+import by.itstep.khodosevich.fourteenstage.levelF.module.QuickSort;
 import by.itstep.khodosevich.fourteenstage.view.Printer;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ControllerLevelFTask07 {
+public class ControllerLevelFTask09 {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -15,8 +17,8 @@ public class ControllerLevelFTask07 {
             int[] array = Array.initArray(size);
             Printer.print("Your array is: " + Arrays.toString(array));
             Printer.print("\nWhich type of action do you want to do?");
-            Printer.print("\n1. Sort array by quick sort method (descend) to the first parity element;");
-            Printer.print("\n2. Sort array by quick sort method (descend) to the last parity element.");
+            Printer.print("\n1. Sort array by quick sort method (ascend) to the first parity element;");
+            Printer.print("\n2. Sort array by quick sort method (ascend) to the last parity element.");
             Printer.print("\nPush only first of second number!!!\n");
 
             int variant;
@@ -41,7 +43,7 @@ public class ControllerLevelFTask07 {
                     message2 += firstIndex;
                     Printer.print(message2);
                     firstIndex = firstIndex == 0 ? ++firstIndex : firstIndex;
-                    QuickSort.quickSortDes(array, 0, firstIndex - 1);
+                    QuickSort.quickSortAsc(array, 0, firstIndex - 1);
                     Printer.print("\n" + Arrays.toString(array));
                 }
 
@@ -54,7 +56,7 @@ public class ControllerLevelFTask07 {
                     message2 += lastIndex;
                     Printer.print(message2);
                     lastIndex = lastIndex == 0 ? ++lastIndex : lastIndex;
-                    QuickSort.quickSortDes(array, 0, lastIndex - 1);
+                    QuickSort.quickSortAsc(array, 0, lastIndex - 1);
                     Printer.print("\n" + Arrays.toString(array));
                 }
             }

@@ -3,15 +3,6 @@ package by.itstep.khodosevich.fourteenstage.levelF.module;
 import java.util.Arrays;
 
 public class MergeSort {
-    public static void main(String[] args) {
-        int[] array = {3, 4, 78, 1, -1, 0, 0};
-        mergeSortDes(array);
-        System.out.println(Arrays.toString(array));
-        System.out.println("---------");
-        int[] array2 = {3, 4, 78, 1, -1, 0, 0};
-        mergeSortDes(array2, 2, 5);
-        System.out.println(Arrays.toString(array2));
-    }
 
     private MergeSort() {
     }
@@ -61,7 +52,7 @@ public class MergeSort {
         mergeAsc(array, leftHalf, rightHalf);
     }
 
-    public static void mergeAsc(int[] array, int[] leftHalf, int[] rightHalf) {
+    private static void mergeAsc(int[] array, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
         int rightSize = rightHalf.length;
 
@@ -136,7 +127,7 @@ public class MergeSort {
         mergeDes(array, leftHalf, rightHalf);
     }
 
-    public static void mergeDes(int[] array, int[] leftHalf, int[] rightHalf) {
+    private static void mergeDes(int[] array, int[] leftHalf, int[] rightHalf) {
         int leftSize = leftHalf.length;
         int rightSize = rightHalf.length;
 
