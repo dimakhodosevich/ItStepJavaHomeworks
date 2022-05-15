@@ -37,6 +37,7 @@ public class MaxAndMinIndex {
         return minIndex;
     }
 
+
     public static int getMaxAbsElementIndex(double[] array) {
         if (array == null || array.length == 0) {
             return -1;

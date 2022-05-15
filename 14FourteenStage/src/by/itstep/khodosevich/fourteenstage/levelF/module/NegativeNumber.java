@@ -36,4 +36,26 @@ public class NegativeNumber {
         return lastIndex;
     }
 
+    public static int findSecondNegativeElementIndex(int[] array) {
+        if (array == null || array.length == 0) {
+            return -1;
+        }
+
+        int firstIndex = -1;
+        int secondIndex = -1;
+        boolean flag = false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0 && !flag) {
+                firstIndex = i;
+                flag = true;
+            }
+
+            if (flag && array[i] < 0 && firstIndex != i) {
+                secondIndex = i;
+                return secondIndex;
+            }
+        }
+
+        return secondIndex;
+    }
 }

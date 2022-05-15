@@ -92,4 +92,6 @@ public class MaxAndMinIndexTest {
         int actual = MaxAndMinIndex.getMaxAbsElementIndex(new double[0]);
         assertEquals(expected, actual);
     }
+
+
 }

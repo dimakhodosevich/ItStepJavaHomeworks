@@ -1,5 +1,6 @@
 package by.itstep.khodosevich.fourteenstage.levelF.module;
 
+import by.itstep.khodosevich.fourteenstage.levelE.module.MaxAndMinIndex;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -132,4 +133,38 @@ public class NegativeNumberTest {
         int actual = findLastNegativeElementIndex(null);
         assertEquals(expected, actual);
     }
+
+    // third - second min element index
+
+    @Test
+    public void findSecondNegativeElementIndexPositiveWithAllDifferentElement() {
+        int[] array = new int[]{-1, 2, -3, 4, -5, 3, 3, 1, 1, 0};
+        int expected = 2;
+        int actual = NegativeNumber.findSecondNegativeElementIndex(array);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void findSecondNegativeElementIndexPositiveWithSameElement() {
+        int[] array = new int[]{1, 1, 1, 1, 1, 1};
+        int expected = -1;
+        int actual = NegativeNumber.findSecondNegativeElementIndex(array);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getSecondMinElementIndexNegativeWithNull() {
+        int expected = -1;
+        int actual = NegativeNumber.findSecondNegativeElementIndex(null);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void getSecondMinElementIndexNegativeWithZeroLength() {
+        int expected = -1;
+        int actual = NegativeNumber.findSecondNegativeElementIndex(new int[0]);
+        assertEquals(expected, actual);
+    }
+
+
 }
