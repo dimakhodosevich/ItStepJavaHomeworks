@@ -9,12 +9,17 @@ public class Multiple {
             throw new RuntimeException();
         }
 
-        double sum = 1;
+        double mult = 0;
+        boolean flag = false;
         for (int i = start; i < end; i++) {
-            sum *= array[i];
+            if (!flag) {
+                mult = 1;
+                flag = true;
+            }
+            mult *= array[i];
         }
 
-        return sum;
+        return mult;
     }
 
     public static double multipleInt(int[] array, int start, int end) {
@@ -22,12 +27,18 @@ public class Multiple {
             throw new RuntimeException();
         }
 
-        double sum = 1;
+        double mult = 0;
+        boolean flag = false;
+
         for (int i = start; i < end; i++) {
-            sum *= array[i];
+            if (!flag) {
+                mult = 1;
+                flag = true;
+            }
+            mult *= array[i];
         }
 
-        return sum;
+        return mult;
     }
 
 }
