@@ -1,16 +1,14 @@
-package by.itstep.khodosevich.fourteenstage.levelE.task05.controller;
+package by.itstep.khodosevich.fourteenstage.levelE.task10.controller;
 
-import by.itstep.khodosevich.fourteenstage.levelE.module.Multiple;
 import by.itstep.khodosevich.fourteenstage.levelE.module.Sum;
 import by.itstep.khodosevich.fourteenstage.levelF.module.Array;
 import by.itstep.khodosevich.fourteenstage.levelF.module.PositiveNumber;
-import by.itstep.khodosevich.fourteenstage.levelF.module.ZeroNumber;
 import by.itstep.khodosevich.fourteenstage.view.Printer;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ControllerLevelETask05 {
+public class ControllerLevelETask10 {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
@@ -22,7 +20,7 @@ public class ControllerLevelETask05 {
             int lastPositiveIndex = PositiveNumber.findLastPositiveElementIndex(array);
 
             if (lastPositiveIndex == -1 || firstPositiveIndex == -1) {
-                Printer.print("\nYour array doesn't has positive element.");
+                Printer.print("\nYour array doesn't has positive elements.");
             } else {
                 int firstPositiveElement = array[firstPositiveIndex];
                 int lastPositiveElement = array[lastPositiveIndex];

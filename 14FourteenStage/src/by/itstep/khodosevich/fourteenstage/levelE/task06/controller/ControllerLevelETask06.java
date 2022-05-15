@@ -17,11 +17,11 @@ public class ControllerLevelETask06 {
             int[] array = Array.initArray(size);
             Printer.print("Your array is: " + Arrays.toString(array) + ".");
             int firstPositiveIndex = PositiveNumber.findFirstPositiveElementIndex(array);
-            int firstPositiveElement = array[firstPositiveIndex];
 
             if (firstPositiveIndex == -1) {
                 Printer.print("\nYour array doesn't has positive element.");
             } else {
+                int firstPositiveElement = array[firstPositiveIndex];
                 Printer.print("\nFirst positive element is " + firstPositiveElement
                         + " and has index " + firstPositiveIndex + ".");
                 double sum = Sum.sumInt(array, firstPositiveIndex+1, array.length);

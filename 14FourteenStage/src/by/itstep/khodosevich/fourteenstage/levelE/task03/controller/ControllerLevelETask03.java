@@ -18,11 +18,11 @@ public class ControllerLevelETask03 {
             int[] array = Array.initArray(size);
             Printer.print("Your array is: " + Arrays.toString(array) + ".");
             int lastPositiveIndex = PositiveNumber.findLastPositiveElementIndex(array);
-            int lastPositiveElement = array[lastPositiveIndex];
 
             if (lastPositiveIndex == -1) {
                 Printer.print("\nYour array doesn't has positive element.");
             } else {
+                int lastPositiveElement = array[lastPositiveIndex];
                 Printer.print("\nLast positive element is " + lastPositiveElement
                         + " and has index " + lastPositiveIndex + ".");
                 double sum = Sum.sumInt(array, 0, lastPositiveIndex);

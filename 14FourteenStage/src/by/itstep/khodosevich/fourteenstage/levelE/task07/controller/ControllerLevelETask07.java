@@ -17,11 +17,11 @@ public class ControllerLevelETask07 {
             double[] array = Array.initArray(size);
             Printer.print("Your array is: " + Arrays.toString(array) + ".");
             int maxAbsIndex = MaxAndMinIndex.getMaxAbsElementIndex(array);
-            double maxAbsElement = array[maxAbsIndex];
 
             if (maxAbsIndex == -1) {
                 Printer.print("\nYour array doesn't match our condition.");
             } else {
+                double maxAbsElement = array[maxAbsIndex];
                 Printer.print("\nMax abs element  " + maxAbsElement
                         + " and has index " + maxAbsIndex + ".");
                 double mult = Multiple.multiple(array, maxAbsIndex, array.length);
