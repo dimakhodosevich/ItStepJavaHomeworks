@@ -22,14 +22,14 @@ public class ControllerLevelETask01 {
             double max = array[maxIndex];
             double min = array[minIndex];
 
-            Printer.print("\nMax value " + max + ", has index " + maxIndex);
-            Printer.print("\nMin value " + min + ", has index " + minIndex);
+            Printer.print("\nMax value " + max + ", has index " + maxIndex + ".");
+            Printer.print("\nMin value " + min + ", has index " + minIndex + ".");
 
             double sum = maxIndex > minIndex
                     ? Sum.sum(array, minIndex + 1, maxIndex)
                     : Sum.sum(array, maxIndex + 1, minIndex);
 
-            Printer.print("\nThe sum between max and min element is " + sum);
+            Printer.print("\nThe sum between max and min element is " + sum + ".");
 
         } catch (Exception exception) {
             Printer.print("\nSomething went wrong!!! Look at stack trace.");

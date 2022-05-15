@@ -16,4 +16,17 @@ public class Sum {
 
         return sum;
     }
+
+    public static double sumInt(int[] array, int start, int end) {
+        if (array == null || array.length == 0 || start < 0 || end > array.length) {
+            throw new RuntimeException();
+        }
+
+        double sum = 0;
+        for (int i = start; i < end; i++) {
+            sum += array[i];
+        }
+
+        return sum;
+    }
 }
