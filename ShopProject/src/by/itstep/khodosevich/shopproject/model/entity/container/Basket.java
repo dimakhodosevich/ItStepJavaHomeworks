@@ -37,7 +37,11 @@ public class Basket {
         this.oranges = oranges;
     }
 
-    public void addOrange(Orange orange) {
+    public void add(Orange orange) {
+        if(orange == null){
+            return;
+        }
+
         Orange[] temp = new Orange[oranges.length + 1];
         int i = 0;
         for (; i < oranges.length; i++) {
@@ -61,7 +65,11 @@ public class Basket {
         oranges = temp;
     }
 
-    public void addBread(Bread bread) {
+    public void add(Bread bread) {
+        if(bread == null){
+            return;
+        }
+
         Bread[] temp = new Bread[breads.length + 1];
         int i = 0;
         for (; i < breads.length; i++) {
@@ -84,7 +92,11 @@ public class Basket {
         breads = temp;
     }
 
-    public void addMilk(Milk milk) {
+    public void add(Milk milk) {
+        if(milk == null){
+            return;
+        }
+
         Milk[] temp = new Milk[milks.length + 1];
         int i = 0;
         for (; i < milks.length; i++) {

@@ -14,11 +14,11 @@ public class Main {
         Bread bread = new Bread("white", "red", 50  );
 
         Basket basket = new Basket();
-        basket.addOrange(orange);
-        basket.addOrange(orange2);
-        basket.addOrange(orange3);
-        basket.addBread(bread);
-        basket.addMilk(milk);
+        basket.add(orange);
+        basket.add(orange2);
+        basket.add(orange3);
+        basket.add(bread);
+        basket.add(milk);
 
         System.out.print(basket);
     }
