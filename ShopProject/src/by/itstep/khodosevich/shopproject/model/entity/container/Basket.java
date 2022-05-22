@@ -1,150 +1,61 @@
 package by.itstep.khodosevich.shopproject.model.entity.container;
 
-import by.itstep.khodosevich.shopproject.model.entity.Bread;
 import by.itstep.khodosevich.shopproject.model.entity.Milk;
-import by.itstep.khodosevich.shopproject.model.entity.Orange;
+import by.itstep.khodosevich.shopproject.model.entity.abstracts.Product;
 
-import java.util.Arrays;
 
 public class Basket {
-    private Milk[] milks;
-    private Bread[] breads;
-    private Orange[] oranges;
+    private Product[] products;
 
     public Basket() {
-        milks = new Milk[0];
-        breads = new Bread[0];
-        oranges = new Orange[0];
+        products = new Product[0];
     }
 
-    public Basket(Milk[] milks, Bread[] breads, Orange[] oranges) {
+    public Basket(Product[] products) {
         this();
 
-        if (milks == null) {
-            milks = new Milk[0];
+        if (products == null) {
+            products = new Milk[0];
         }
 
-        if (breads == null) {
-            breads = new Bread[0];
-        }
-
-        if (oranges == null) {
-            oranges = new Orange[0];
-        }
-
-        this.milks = milks;
-        this.breads = breads;
-        this.oranges = oranges;
+        this.products = products;
     }
 
-    public void add(Orange orange) {
-        if (orange == null) {
+    public void add(Product product) {
+        if (product == null) {
             return;
         }
 
-        Orange[] temp = new Orange[oranges.length + 1];
+        Product[] temp = new Product[products.length + 1];
         int i = 0;
-        for (; i < oranges.length; i++) {
-            temp[i] = oranges[i];
+        for (; i < products.length; i++) {
+            temp[i] = products[i];
         }
 
-        temp[i] = orange;
-        oranges = temp;
+        temp[i] = product;
+        products = temp;
     }
 
-    public void removeOrange(int index) {
-        Orange[] temp = new Orange[oranges.length - 1];
+    public void remove(int index) {
+        Product[] temp = new Product[products.length - 1];
 
 
-        for (int i = 0, j = 0; i < oranges.length; i++) {
+        for (int i = 0, j = 0; i < products.length; i++) {
             if (i != index) {
-                temp[j++] = oranges[i];
+                temp[j++] = products[i];
             }
         }
 
-        oranges = temp;
+        products = temp;
     }
 
-    public void add(Bread bread) {
-        if (bread == null) {
-            return;
-        }
-
-        Bread[] temp = new Bread[breads.length + 1];
-        int i = 0;
-        for (; i < breads.length; i++) {
-            temp[i] = breads[i];
-        }
-
-        temp[i] = bread;
-        breads = temp;
+    public int getProductCount() {
+        return products.length;
     }
 
-    public void removeBread(int index) {
-        Bread[] temp = new Bread[breads.length - 1];
-
-        for (int i = 0, j = 0; i < breads.length; i++) {
-            if (i != index) {
-                temp[j++] = breads[i];
-            }
-        }
-
-        breads = temp;
-    }
-
-    public void add(Milk milk) {
-        if (milk == null) {
-            return;
-        }
-
-        Milk[] temp = new Milk[milks.length + 1];
-        int i = 0;
-        for (; i < milks.length; i++) {
-            temp[i] = milks[i];
-        }
-
-        temp[i] = milk;
-        milks = temp;
-    }
-
-    public void removeMilk(int index) {
-        Milk[] temp = new Milk[milks.length - 1];
-
-
-        for (int i = 0, j = 0; i < milks.length; i++) {
-            if (i != index) {
-                temp[j++] = milks[i];
-            }
-        }
-
-        milks = temp;
-    }
-
-    public int getOrangeSize() {
-        return oranges.length;
-    }
-
-    public int getBreadSize() {
-        return breads.length;
-    }
-
-    public int getMIlkSize() {
-        return milks.length;
-    }
-
-//    !!!
-    public Orange getOrange(int index) {
-        return oranges[index];
-    }
-
-//    !!!
-    public Bread getBread(int index) {
-        return breads[index];
-    }
-
-//    !!!
-    public Milk getMilk(int index) {
-        return milks[index];
+    //    !!!
+    public Product getProduct(int index) {
+        return products[index];
     }
 
     @Override
@@ -152,24 +63,15 @@ public class Basket {
         StringBuilder builder = new StringBuilder();
         String msg = "Your basket is empty!!!\n";
 
-        if (oranges == null || milks == null || breads == null
-                || (oranges.length == 0 && milks.length == 0 && breads.length == 0)) {
+        if (products.length == 0) {
             builder.append(msg);
         } else {
 
             msg = "Your basket has: \n";
             builder.append(msg);
 
-            for (int i = 0; i < oranges.length; i++) {
-                builder.append(oranges[i]);
-            }
-
-            for (int i = 0; i < milks.length; i++) {
-                builder.append(milks[i]);
-            }
-
-            for (int i = 0; i < breads.length; i++) {
-                builder.append(breads[i]);
+            for (int i = 0; i < products.length; i++) {
+                builder.append(products[i]);
             }
         }
 

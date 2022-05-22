@@ -4,6 +4,7 @@ import by.itstep.khodosevich.shopproject.model.entity.Bread;
 import by.itstep.khodosevich.shopproject.model.entity.Milk;
 import by.itstep.khodosevich.shopproject.model.entity.Orange;
 import by.itstep.khodosevich.shopproject.model.entity.container.Basket;
+import by.itstep.khodosevich.shopproject.model.logic.ShopAssistance;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +22,7 @@ public class Main {
         basket.add(milk);
 
         System.out.print(basket);
+        double totalPrice = ShopAssistance.calculateTotalPrice(basket);
+        System.out.println("Total price: " + totalPrice);
     }
 }

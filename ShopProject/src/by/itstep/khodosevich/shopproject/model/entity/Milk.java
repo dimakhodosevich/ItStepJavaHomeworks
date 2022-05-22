@@ -1,17 +1,18 @@
 package by.itstep.khodosevich.shopproject.model.entity;
 
-public class Milk {
-    private double volume;
+import by.itstep.khodosevich.shopproject.model.entity.abstracts.Product;
+
+public class Milk extends Product {
     private double fat;
-    private double money;
+    private double volume;
 
     public Milk() {
     }
 
-    public Milk(double volume, double fat, double money) {
-        this.volume = volume;
+    public Milk(double volume, double fat, double price) {
+        super(price);
         this.fat = fat;
-        this.money = money;
+        this.volume = volume;
     }
 
     public double getVolume() {
@@ -22,10 +23,6 @@ public class Milk {
         return fat;
     }
 
-    public double getMoney() {
-        return money;
-    }
-
     public void setVolume(double volume) {
         this.volume = volume;
     }
@@ -34,15 +31,11 @@ public class Milk {
         this.fat = fat;
     }
 
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
     @Override
     public String toString() {
         return "Milk: " +
                 "volume = " + volume +
                 ", fat = " + fat +
-                ", money = " + money +";\n";
+                super.toString()+";\n";
     }
 }

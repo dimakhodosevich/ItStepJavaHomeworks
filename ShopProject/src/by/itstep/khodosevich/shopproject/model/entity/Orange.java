@@ -1,17 +1,18 @@
 package by.itstep.khodosevich.shopproject.model.entity;
 
-public class Orange {
+import by.itstep.khodosevich.shopproject.model.entity.abstracts.Product;
+
+public class Orange extends Product {
     private int diameter;
     private int vitaminC;
-    private double cost;
 
     public Orange() {
     }
 
-    public Orange(int diameter, int vitaminC, double cost) {
+    public Orange(int diameter, int vitaminC, double price) {
+        super(price);
         this.diameter = diameter;
         this.vitaminC = vitaminC;
-        this.cost = cost;
     }
 
     public int getDiameter() {
@@ -22,10 +23,6 @@ public class Orange {
         return vitaminC;
     }
 
-    public double getCost() {
-        return cost;
-    }
-
     public void setDiameter(int diameter) {
         this.diameter = diameter;
     }
@@ -34,15 +31,11 @@ public class Orange {
         this.vitaminC = vitaminC;
     }
 
-    public void setCost(double cost) {
-        this.cost = cost;
-    }
-
     @Override
     public String toString() {
         return "Orange: " +
                 "diameter = " + diameter +
                 ", vitaminC = " + vitaminC +
-                ", cost = " + cost + ";\n";
+                super.toString()+ ";\n";
     }
 }

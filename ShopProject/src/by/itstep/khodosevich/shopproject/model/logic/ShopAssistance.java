@@ -9,16 +9,8 @@ public class ShopAssistance {
     public static double calculateTotalPrice(Basket basket){
         double total = 0;
 
-        for(int i = 0; i<basket.getMIlkSize(); i++){
-            total+=basket.getMilk(i).getMoney();
-        }
-
-        for(int i = 0; i<basket.getBreadSize(); i++){
-            total+=basket.getBread(i).getPrice();
-        }
-
-        for(int i = 0; i<basket.getOrangeSize(); i++){
-            total+=basket.getOrange(i).getCost();
+        for(int i = 0; i<basket.getProductCount(); i++){
+            total+=basket.getProduct(i).getPrice();
         }
 
         return total;
