@@ -38,7 +38,7 @@ public class Basket {
     }
 
     public void add(Orange orange) {
-        if(orange == null){
+        if (orange == null) {
             return;
         }
 
@@ -66,7 +66,7 @@ public class Basket {
     }
 
     public void add(Bread bread) {
-        if(bread == null){
+        if (bread == null) {
             return;
         }
 
@@ -93,7 +93,7 @@ public class Basket {
     }
 
     public void add(Milk milk) {
-        if(milk == null){
+        if (milk == null) {
             return;
         }
 
@@ -118,6 +118,33 @@ public class Basket {
         }
 
         milks = temp;
+    }
+
+    public int getOrangeSize() {
+        return oranges.length;
+    }
+
+    public int getBreadSize() {
+        return breads.length;
+    }
+
+    public int getMIlkSize() {
+        return milks.length;
+    }
+
+//    !!!
+    public Orange getOrange(int index) {
+        return oranges[index];
+    }
+
+//    !!!
+    public Bread getBread(int index) {
+        return breads[index];
+    }
+
+//    !!!
+    public Milk getMilk(int index) {
+        return milks[index];
     }
 
     @Override
